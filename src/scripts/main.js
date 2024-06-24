@@ -1,6 +1,6 @@
 AOS.init();
 
-const dataDovento= new Date("dec12, 2023  19:00");
+const dataDovento= new Date("dec 12, 2024  19:00:00");
 const timeStaempDoevento = dataDovento.getTime ();
 
 const contaAsHoras = setInterval( function()  {
@@ -15,8 +15,8 @@ const contaAsHoras = setInterval( function()  {
 
 
         const diasAteOEvento = Math.floor( distanciaAteOEvento / diaEmMS  );
-        const horasAteOEvento =Math.floor((distanciaAteOEvento %horaEmMS) / horaEmMS);
-        const minutosAteOEvento =Math.floor((distanciaAteOEvento % minutoEmMS) /horaEmMS   )  ;
+        const horasAteOEvento =Math.floor((distanciaAteOEvento %diaEmMS) / horaEmMS);
+        const minutosAteOEvento =Math.floor((distanciaAteOEvento % horaEmMS) / minutoEmMS   )  ;
         const segundosAteOEvento =Math.floor((distanciaAteOEvento%  minutoEmMS ) / 1000 );
 
             document.getElementById('contador').innerHTML =`${diasAteOEvento}d  ${horasAteOEvento}h ${minutosAteOEvento}m  ${segundosAteOEvento}s `
